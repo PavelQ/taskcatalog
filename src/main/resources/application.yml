@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: "task-catalog"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/taskcatalog
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/taskcatalog
+    user: postgres
+    password: postgres
+  webflux:
+    problemdetails:
+      enabled: true
+
+  threads:
+    virtual:
+      enabled: true
+
+logging:
+  file:
+    path: logs
+  level:
+    ru.pavelq.taskcatalog: INFO
